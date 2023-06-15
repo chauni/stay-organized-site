@@ -22,8 +22,14 @@
     </div>
 
    <div class="container d-flex justify-content-center my-3">
-    <h1 class="border-bottom">To-Do List</h1>
+        <h1 class="border-bottom">To-Do List</h1>
    </div>
+
+    <div class="container d-flex justify-content-center my-3">
+        <button type="button" class="btn btn-danger" id="newTodoBtn">+ New Task</button>
+   </div>
+    
+
 
    <div class="container my-3">
     <h3>Select a user:</h3>
@@ -32,10 +38,11 @@
     </select>
    </div>
 
-   <div class="container showHide">
+   <div class="container">
         <table class="table" id="todoTable">
             <thead>
                 <tr>
+                    <th>Status</th>
                     <th>Category</th>
                     <th>Description</th>
                     <th>Deadline</th>
