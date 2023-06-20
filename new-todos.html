@@ -31,36 +31,36 @@
                 <legend class="border-bottom lead mb-3">Create a new task</legend>
 
                 <p> User:
-                <select id="userSelector" class="form-select">
-                    <option value="">Select a user</option>
+                <select id="userSelector" class="form-select" required>
+                    <option selected disabled value="">Select a user</option>
                 </select>
                 </p>
 
                 <p> Category:
-                    <select id="categorySelector" class="form-select">
-                        <option value="">Select a category</option>
+                    <select id="categorySelector" class="form-select" required>
+                        <option selected disabled value="">Select a category</option>
                     </select>
                 </p>
 
                 <p> Priority:
-                    <select id="prioritySelector" class="form-select">
-                        <option value="">Select a priority</option>
-                        <option value="low">Low</option>
-                        <option value="medium">Medium</option>
-                        <option value="high">High</option>
+                    <select id="prioritySelector" class="form-select" required>
+                        <option selected disabled value="">Select a priority</option>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
                     </select>
                 </p>
 
                 <p>Description:
-                <textarea id="descriptionInput" class="form-control"></textarea>
+                <textarea id="descriptionInput" class="form-control" required></textarea>
                 </p>
 
                 <p> Deadline:
-                    <input type="text" id="deadlineInput" class="form-control" placeholder="YYYY-MM-DD">
+                    <input type="text" id="deadlineInput" class="form-control" placeholder="YYYY-MM-DD" required>
                 </p>
 
                 <div class="d-flex justify-content-center">
-                    <button type="button" class="btn btn-danger btn-lg" id="addTodoBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to List</button>
+                    <button type="submit" class="btn btn-danger btn-lg" id="addTodoBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to List</button>
                 </div>
 
             </fieldset>
@@ -69,7 +69,7 @@
 
     <!-- modal -->
   
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content justify-content-center">
             <div class="modal-header">
@@ -85,7 +85,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       
 
     <!-- footer -->

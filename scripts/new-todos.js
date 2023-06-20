@@ -7,6 +7,8 @@ const deadlineInput = document.getElementById('deadlineInput')
 const addTodoBtn = document.getElementById('addTodoBtn');
 const confirmTodoBtn = document.getElementById('confirmTodoBtn');
 
+const form = document.querySelector('form')
+
 fetch('http://localhost:8083/api/users')
 .then(response => response.json())
 .then(users => {
@@ -25,12 +27,15 @@ fetch('http://localhost:8083/api/categories')
     })
 })
 
-addTodoBtn.addEventListener('click', () => {
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    
     const selectedUser = userSelector.value;
     const selectedCategory = categorySelector.value;
     const selectedPriority = prioritySelector.value;
     const taskDescription = descriptionInput.value;
     const taskDeadline = deadlineInput.value;
+
 
     fetch('http://localhost:8083/api/todos', {
         method: 'POST',
@@ -45,7 +50,9 @@ addTodoBtn.addEventListener('click', () => {
             "Content-type": "application/json; charset=utf-8"
         }
     })
+    console.log('hey');
 })
+
 
 confirmTodoBtn.addEventListener('click', () => {
     window.location.href = './todos.html'
